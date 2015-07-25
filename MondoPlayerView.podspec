@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "MondoPlayerView"
-  s.version      = "0.0.8"
+  s.version      = "0.0.9"
   s.summary      = "Provides a custom class and view for iOS AVPlayer."
   s.platform	 = :ios, "8.0"
   s.homepage     = "https://www.moltenviper.com"
