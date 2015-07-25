@@ -104,8 +104,6 @@ enum MondoPlayerState: Int {
     
     deinit {
         
-        log.trace("entered")
-
         self.destroyPlayer()
         
     }
@@ -114,8 +112,6 @@ enum MondoPlayerState: Int {
     
     override init(frame: CGRect) {
         
-        log.trace("entered")
-
         self.endAction = MondoPlayerEndAction.Stop
         self.state = MondoPlayerState.Stopped;
         self.volume = 1.0;
@@ -135,8 +131,6 @@ enum MondoPlayerState: Int {
     
     required init(coder aDecoder: NSCoder) {
         
-        log.trace("entered")
-
         self.endAction = MondoPlayerEndAction.Stop
         self.state = MondoPlayerState.Stopped;
         self.volume = 1.0;
@@ -151,8 +145,6 @@ enum MondoPlayerState: Int {
     // MARK: - Layout
     
     override func layoutSubviews() {
-        
-        log.trace("entered")
         
         if ((self.actionButton) != nil) {
             self.actionButton!.frame = self.bounds
@@ -169,8 +161,6 @@ enum MondoPlayerState: Int {
     // MARK: - Player Operations
     
     func setupPlayer() {
-        
-        log.trace("entered")
         
         if self.URL == nil {
             return;
@@ -200,8 +190,6 @@ enum MondoPlayerState: Int {
     
     func destroyPlayer() {
         
-        log.trace("entered")
-        
         self.removeObservers();
         self.player = nil
 //        self.playerLayer?.removeFromSuperlayer()
@@ -216,16 +204,12 @@ enum MondoPlayerState: Int {
     
     func playerFailed(notification: NSNotification) {
         
-        log.trace("entered")
-        
         self.destroyPlayer();
         self.delegate?.mondoPlayer(self, encounteredError: NSError(domain: "MondoPlayer", code: 1, userInfo: [NSLocalizedDescriptionKey : "An unknown error occured."]))
         
     }
     
     func playerPlayedToEnd(notification: NSNotification) {
-        
-        log.trace("entered")
         
         switch self.endAction {
         case .Loop:
@@ -242,8 +226,6 @@ enum MondoPlayerState: Int {
     
     func addObservers() {
         
-        log.trace("entered")
-        
         self.player?.addObserver(self, forKeyPath: "rate", options: nil, context: nil)
         self.player?.currentItem?.addObserver(self, forKeyPath: "playbackBufferEmpty", options: nil, context: nil)
         self.player?.currentItem?.addObserver(self, forKeyPath: "status", options: nil, context: nil)
@@ -257,8 +239,6 @@ enum MondoPlayerState: Int {
     
     func removeObservers() {
         
-        log.trace("entered")
-        
         self.player?.removeObserver(self, forKeyPath: "rate")
         self.player?.currentItem?.removeObserver(self, forKeyPath: "playbackBufferEmpty")
         self.player?.currentItem?.removeObserver(self, forKeyPath: "status")
@@ -270,8 +250,6 @@ enum MondoPlayerState: Int {
     // -------------------------------------------------------------
     
     override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [NSObject : AnyObject]?, context: UnsafeMutablePointer<Void>)  {
-        
-        log.trace("entered")
         
         let obj = object as? NSObject
         
@@ -319,8 +297,6 @@ enum MondoPlayerState: Int {
     
     func play() {
         
-        log.trace("entered")
-        
         switch self.state {
         case MondoPlayerState.Paused:
             self.player?.play()
@@ -336,8 +312,6 @@ enum MondoPlayerState: Int {
     
     func pause() {
         
-        log.trace("entered")
-        
         switch self.state {
         case MondoPlayerState.Playing, MondoPlayerState.Loading:
             self.player?.pause()
@@ -352,8 +326,6 @@ enum MondoPlayerState: Int {
     
     func stop() {
         
-        log.trace("entered")
-        
         if (self.state == MondoPlayerState.Stopped) {
             return
         }
@@ -366,8 +338,6 @@ enum MondoPlayerState: Int {
     // MARK: - Getters & Setters
     
     func setStateNotifyingDelegate(state: MondoPlayerState) {
-        
-        log.trace("entered")
         
         self.state = state
         self.delegate?.mondoPlayer(self, changedState: state)
