@@ -46,7 +46,7 @@ enum MondoPlayerState: Int {
     case Loading, Playing, Paused
 }
 
-@IBDesignable public class MondoPlayer: UIView {
+@IBDesignable class MondoPlayer: UIView {
 
     
     // -------------------------------------------------------------
@@ -150,7 +150,7 @@ enum MondoPlayerState: Int {
     
     // -------------------------------------------------------------
     
-    required public init(coder aDecoder: NSCoder) {
+    required init(coder aDecoder: NSCoder) {
         
         self.endAction = MondoPlayerEndAction.Stop
         self.state = MondoPlayerState.Stopped;
@@ -165,7 +165,7 @@ enum MondoPlayerState: Int {
     
     // MARK: - Layout
     
-    override public func layoutSubviews() {
+    override func layoutSubviews() {
         
         if ((self.actionButton) != nil) {
             self.actionButton!.frame = self.bounds
@@ -270,7 +270,7 @@ enum MondoPlayerState: Int {
     
     // -------------------------------------------------------------
     
-    override public func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [NSObject : AnyObject]?, context: UnsafeMutablePointer<Void>)  {
+    override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [NSObject : AnyObject]?, context: UnsafeMutablePointer<Void>)  {
         
         let obj = object as? NSObject
         
