@@ -31,22 +31,22 @@ import AVFoundation
 import CoreMedia
 import UIKit
 
-protocol MondoPlayerDelegate {
+public protocol MondoPlayerDelegate {
     func mondoPlayer(mondoPlayer: MondoPlayer, changedState: MondoPlayerState)
     func mondoPlayer(mondoPlayer: MondoPlayer, encounteredError: NSError)
 }
 
-enum MondoPlayerEndAction: Int {
+public enum MondoPlayerEndAction: Int {
     case Stop = 1
     case Loop
 }
 
-enum MondoPlayerState: Int {
+public enum MondoPlayerState: Int {
     case Stopped = 1
     case Loading, Playing, Paused
 }
 
-@IBDesignable class MondoPlayer: UIView {
+@IBDesignable public class MondoPlayer: UIView {
 
     
     // -------------------------------------------------------------
@@ -87,11 +87,11 @@ enum MondoPlayerState: Int {
     
     // MARK: - Public
     
-    var delegate : MondoPlayerDelegate?
+    public var delegate : MondoPlayerDelegate?
     
-    var endAction : MondoPlayerEndAction
+    public var endAction : MondoPlayerEndAction
     
-    var state : MondoPlayerState {
+    public var state : MondoPlayerState {
         didSet {
             switch (self.state) {
             case .Paused, .Stopped:
@@ -104,13 +104,13 @@ enum MondoPlayerState: Int {
         }
     }
     
-    var URL : NSURL? {
+    public var URL : NSURL? {
         didSet {
             self.destroyPlayer()
         }
     }
     
-    var volume : Float {
+    public var volume : Float {
         didSet {
             if (self.player != nil) {
                 self.player!.volume = self.volume
@@ -131,7 +131,7 @@ enum MondoPlayerState: Int {
     
     // -------------------------------------------------------------
     
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         
         self.endAction = MondoPlayerEndAction.Stop
         self.state = MondoPlayerState.Stopped;
@@ -150,7 +150,7 @@ enum MondoPlayerState: Int {
     
     // -------------------------------------------------------------
     
-    required init(coder aDecoder: NSCoder) {
+    required public init(coder aDecoder: NSCoder) {
         
         self.endAction = MondoPlayerEndAction.Stop
         self.state = MondoPlayerState.Stopped;
@@ -165,7 +165,7 @@ enum MondoPlayerState: Int {
     
     // MARK: - Layout
     
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         
         if ((self.actionButton) != nil) {
             self.actionButton!.frame = self.bounds
@@ -270,7 +270,7 @@ enum MondoPlayerState: Int {
     
     // -------------------------------------------------------------
     
-    override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [NSObject : AnyObject]?, context: UnsafeMutablePointer<Void>)  {
+    override public func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [NSObject : AnyObject]?, context: UnsafeMutablePointer<Void>)  {
         
         let obj = object as? NSObject
         
@@ -316,7 +316,7 @@ enum MondoPlayerState: Int {
     
     // MARK: - Player Actions
     
-    func play() {
+    public func play() {
         
         switch self.state {
         case MondoPlayerState.Paused:
@@ -331,7 +331,7 @@ enum MondoPlayerState: Int {
     
     // -------------------------------------------------------------
     
-    func pause() {
+    public func pause() {
         
         switch self.state {
         case MondoPlayerState.Playing, MondoPlayerState.Loading:
@@ -345,7 +345,7 @@ enum MondoPlayerState: Int {
     
     // -------------------------------------------------------------
     
-    func stop() {
+    public func stop() {
         
         if (self.state == MondoPlayerState.Stopped) {
             return
