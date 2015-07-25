@@ -11,6 +11,11 @@
 		F5E9A95D1B63418E00679FEA /* MondoPlayerView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5E9A9511B63418E00679FEA /* MondoPlayerView.framework */; };
 		F5E9A9641B63418E00679FEA /* MondoPlayerViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E9A9631B63418E00679FEA /* MondoPlayerViewTests.swift */; };
 		F5E9A96E1B6342CF00679FEA /* MondoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E9A96D1B6342CF00679FEA /* MondoPlayer.swift */; };
+		F5E9A9781B6346CA00679FEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E9A9771B6346CA00679FEA /* AppDelegate.swift */; };
+		F5E9A97A1B6346CA00679FEA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E9A9791B6346CA00679FEA /* ViewController.swift */; };
+		F5E9A97D1B6346CA00679FEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5E9A97B1B6346CA00679FEA /* Main.storyboard */; };
+		F5E9A97F1B6346CA00679FEA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5E9A97E1B6346CA00679FEA /* Images.xcassets */; };
+		F5E9A98E1B6346CA00679FEA /* MondoPlayerTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E9A98D1B6346CA00679FEA /* MondoPlayerTestTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -20,6 +25,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = F5E9A9501B63418E00679FEA;
 			remoteInfo = MondoPlayerView;
+		};
+		F5E9A9881B6346CA00679FEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5E9A9481B63418E00679FEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5E9A9721B6346CA00679FEA;
+			remoteInfo = MondoPlayerTest;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -31,6 +43,15 @@
 		F5E9A9621B63418E00679FEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5E9A9631B63418E00679FEA /* MondoPlayerViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MondoPlayerViewTests.swift; sourceTree = "<group>"; };
 		F5E9A96D1B6342CF00679FEA /* MondoPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MondoPlayer.swift; sourceTree = "<group>"; };
+		F5E9A9731B6346CA00679FEA /* MondoPlayerTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MondoPlayerTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5E9A9761B6346CA00679FEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5E9A9771B6346CA00679FEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F5E9A9791B6346CA00679FEA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F5E9A97C1B6346CA00679FEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F5E9A97E1B6346CA00679FEA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F5E9A9871B6346CA00679FEA /* MondoPlayerTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MondoPlayerTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5E9A98C1B6346CA00679FEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5E9A98D1B6346CA00679FEA /* MondoPlayerTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MondoPlayerTestTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +70,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F5E9A9701B6346CA00679FEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5E9A9841B6346CA00679FEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -57,6 +92,8 @@
 			children = (
 				F5E9A9531B63418E00679FEA /* MondoPlayerView */,
 				F5E9A9601B63418E00679FEA /* MondoPlayerViewTests */,
+				F5E9A9741B6346CA00679FEA /* MondoPlayerTest */,
+				F5E9A98A1B6346CA00679FEA /* MondoPlayerTestTests */,
 				F5E9A9521B63418E00679FEA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -66,6 +103,8 @@
 			children = (
 				F5E9A9511B63418E00679FEA /* MondoPlayerView.framework */,
 				F5E9A95C1B63418E00679FEA /* MondoPlayerViewTests.xctest */,
+				F5E9A9731B6346CA00679FEA /* MondoPlayerTest.app */,
+				F5E9A9871B6346CA00679FEA /* MondoPlayerTestTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,6 +140,43 @@
 			isa = PBXGroup;
 			children = (
 				F5E9A9621B63418E00679FEA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F5E9A9741B6346CA00679FEA /* MondoPlayerTest */ = {
+			isa = PBXGroup;
+			children = (
+				F5E9A9771B6346CA00679FEA /* AppDelegate.swift */,
+				F5E9A9791B6346CA00679FEA /* ViewController.swift */,
+				F5E9A97B1B6346CA00679FEA /* Main.storyboard */,
+				F5E9A97E1B6346CA00679FEA /* Images.xcassets */,
+				F5E9A9751B6346CA00679FEA /* Supporting Files */,
+			);
+			path = MondoPlayerTest;
+			sourceTree = "<group>";
+		};
+		F5E9A9751B6346CA00679FEA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F5E9A9761B6346CA00679FEA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F5E9A98A1B6346CA00679FEA /* MondoPlayerTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				F5E9A98D1B6346CA00679FEA /* MondoPlayerTestTests.swift */,
+				F5E9A98B1B6346CA00679FEA /* Supporting Files */,
+			);
+			path = MondoPlayerTestTests;
+			sourceTree = "<group>";
+		};
+		F5E9A98B1B6346CA00679FEA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F5E9A98C1B6346CA00679FEA /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -155,6 +231,41 @@
 			productReference = F5E9A95C1B63418E00679FEA /* MondoPlayerViewTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		F5E9A9721B6346CA00679FEA /* MondoPlayerTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5E9A9931B6346CA00679FEA /* Build configuration list for PBXNativeTarget "MondoPlayerTest" */;
+			buildPhases = (
+				F5E9A96F1B6346CA00679FEA /* Sources */,
+				F5E9A9701B6346CA00679FEA /* Frameworks */,
+				F5E9A9711B6346CA00679FEA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MondoPlayerTest;
+			productName = MondoPlayerTest;
+			productReference = F5E9A9731B6346CA00679FEA /* MondoPlayerTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F5E9A9861B6346CA00679FEA /* MondoPlayerTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5E9A9941B6346CA00679FEA /* Build configuration list for PBXNativeTarget "MondoPlayerTestTests" */;
+			buildPhases = (
+				F5E9A9831B6346CA00679FEA /* Sources */,
+				F5E9A9841B6346CA00679FEA /* Frameworks */,
+				F5E9A9851B6346CA00679FEA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F5E9A9891B6346CA00679FEA /* PBXTargetDependency */,
+			);
+			name = MondoPlayerTestTests;
+			productName = MondoPlayerTestTests;
+			productReference = F5E9A9871B6346CA00679FEA /* MondoPlayerTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -170,6 +281,13 @@
 					F5E9A95B1B63418E00679FEA = {
 						CreatedOnToolsVersion = 6.4;
 					};
+					F5E9A9721B6346CA00679FEA = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					F5E9A9861B6346CA00679FEA = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = F5E9A9721B6346CA00679FEA;
+					};
 				};
 			};
 			buildConfigurationList = F5E9A94B1B63418E00679FEA /* Build configuration list for PBXProject "MondoPlayerView" */;
@@ -178,6 +296,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = F5E9A9471B63418E00679FEA;
 			productRefGroup = F5E9A9521B63418E00679FEA /* Products */;
@@ -186,6 +305,8 @@
 			targets = (
 				F5E9A9501B63418E00679FEA /* MondoPlayerView */,
 				F5E9A95B1B63418E00679FEA /* MondoPlayerViewTests */,
+				F5E9A9721B6346CA00679FEA /* MondoPlayerTest */,
+				F5E9A9861B6346CA00679FEA /* MondoPlayerTestTests */,
 			);
 		};
 /* End PBXProject section */
@@ -199,6 +320,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F5E9A95A1B63418E00679FEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5E9A9711B6346CA00679FEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5E9A97D1B6346CA00679FEA /* Main.storyboard in Resources */,
+				F5E9A97F1B6346CA00679FEA /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5E9A9851B6346CA00679FEA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -224,6 +361,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F5E9A96F1B6346CA00679FEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5E9A97A1B6346CA00679FEA /* ViewController.swift in Sources */,
+				F5E9A9781B6346CA00679FEA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5E9A9831B6346CA00679FEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5E9A98E1B6346CA00679FEA /* MondoPlayerTestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -232,7 +386,23 @@
 			target = F5E9A9501B63418E00679FEA /* MondoPlayerView */;
 			targetProxy = F5E9A95E1B63418E00679FEA /* PBXContainerItemProxy */;
 		};
+		F5E9A9891B6346CA00679FEA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5E9A9721B6346CA00679FEA /* MondoPlayerTest */;
+			targetProxy = F5E9A9881B6346CA00679FEA /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F5E9A97B1B6346CA00679FEA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5E9A97C1B6346CA00679FEA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		F5E9A9651B63418E00679FEA /* Debug */ = {
@@ -387,6 +557,64 @@
 			};
 			name = Release;
 		};
+		F5E9A98F1B6346CA00679FEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MondoPlayerTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F5E9A9901B6346CA00679FEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MondoPlayerTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F5E9A9911B6346CA00679FEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MondoPlayerTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MondoPlayerTest.app/MondoPlayerTest";
+			};
+			name = Debug;
+		};
+		F5E9A9921B6346CA00679FEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MondoPlayerTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MondoPlayerTest.app/MondoPlayerTest";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -416,6 +644,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		F5E9A9931B6346CA00679FEA /* Build configuration list for PBXNativeTarget "MondoPlayerTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5E9A98F1B6346CA00679FEA /* Debug */,
+				F5E9A9901B6346CA00679FEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F5E9A9941B6346CA00679FEA /* Build configuration list for PBXNativeTarget "MondoPlayerTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5E9A9911B6346CA00679FEA /* Debug */,
+				F5E9A9921B6346CA00679FEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
