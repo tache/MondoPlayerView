@@ -112,8 +112,8 @@
 		F5E9A9531B63418E00679FEA /* MondoPlayerView */ = {
 			isa = PBXGroup;
 			children = (
-				F5E9A96D1B6342CF00679FEA /* MondoPlayer.swift */,
 				F5E9A9561B63418E00679FEA /* MondoPlayerView.h */,
+				F5E9A96D1B6342CF00679FEA /* MondoPlayer.swift */,
 				F5E9A9541B63418E00679FEA /* Supporting Files */,
 			);
 			path = MondoPlayerView;
@@ -652,6 +652,7 @@
 				F5E9A9901B6346CA00679FEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F5E9A9941B6346CA00679FEA /* Build configuration list for PBXNativeTarget "MondoPlayerTestTests" */ = {
 			isa = XCConfigurationList;
@@ -660,6 +661,7 @@
 				F5E9A9921B6346CA00679FEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

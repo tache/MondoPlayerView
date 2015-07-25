@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.author       = { "tache" => "tgs@tachegroup.com" }
   s.social_media_url   = "http://twitter.com/tache"
   s.source       = { :git => "https://github.com/tache/MondoPlayerView.git", :tag => "#{s.version}"}
-  s.source_files = "MondoPlayerView/**/*.{swift}"
+  s.source_files = "MondoPlayerView/**/*.{swift,h}"
   # s.resources = "MondoPlayerView/**/*.{png,jpeg,jpg,storyboard,xib}"
   s.framework    = "AVFoundation", "CoreMedia"
   s.description  = <<-DESC
