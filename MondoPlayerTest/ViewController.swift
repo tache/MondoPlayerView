@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MondoPlayer
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, MondoPlayerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
