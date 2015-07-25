@@ -1,6 +1,15 @@
 # Xcode
 #
+# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+
+# OS X
+.DS_Store
+
+## Xcode generated
 build/
+DerivedData
+
+## Various settings
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -10,12 +19,22 @@ build/
 *.perspectivev3
 !default.perspectivev3
 xcuserdata
+profile
+
+## Other
 *.xccheckout
 *.moved-aside
-DerivedData
+*.xcuserstate
+*.xcworkspacedata
+
+## Obj-C/Swift specific
 *.hmap
 *.ipa
-*.xcuserstate
+
+## Ruby
+.ruby-*
+.rvmrc*
+Gemfile.lock
 
 # CocoaPods
 #
@@ -23,11 +42,12 @@ DerivedData
 # you should judge for yourself, the pros and cons are mentioned at:
 # http://guides.cocoapods.org/using/using-cocoapods.html#should-i-ignore-the-pods-directory-in-source-control
 #
-# Pods/
+Pods/
+Podfile.lock
 
 # Carthage
 #
 # Add this line if you want to avoid checking in source code from Carthage dependencies.
 # Carthage/Checkouts
-
-Carthage/Build
+#
+# Carthage/Build
