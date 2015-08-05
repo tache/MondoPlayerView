@@ -34,7 +34,8 @@ profile
 ## Ruby
 .ruby-*
 .rvmrc*
-Gemfile.lock
+
+#Gemfile.lock
 
 # CocoaPods
 #
