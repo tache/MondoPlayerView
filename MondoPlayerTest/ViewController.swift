@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import MondoPlayer
+import MondoPlayerView
 
 class ViewController: UIViewController, MondoPlayerDelegate {
 
@@ -21,6 +21,13 @@ class ViewController: UIViewController, MondoPlayerDelegate {
         // Dispose of any resources that can be recreated.
     }
 
+    func mondoPlayer(mondoPlayer: MondoPlayer, changedState: MondoPlayerState) {
+        // TODO
+    }
+    
+    func mondoPlayer(mondoPlayer: MondoPlayer, encounteredError: NSError) {
+        // TODO
+    }
 
 }
 
