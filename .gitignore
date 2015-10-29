@@ -26,15 +26,19 @@ profile
 *.moved-aside
 *.xcuserstate
 *.xcworkspacedata
+-*/
+•*/
+scratch.txt
 
 ## Obj-C/Swift specific
 *.hmap
 *.ipa
 
 ## Ruby
-.ruby-*
+.ruby-gemset.*
+.ruby-version.*
 .rvmrc*
-Gemfile.lock
+#Gemfile.lock
 
 # CocoaPods
 #
