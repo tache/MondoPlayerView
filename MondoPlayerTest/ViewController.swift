@@ -11,9 +11,11 @@ import MondoPlayerView
 
 class ViewController: UIViewController, MondoPlayerDelegate {
 
+    @IBOutlet weak var mondoPlayer: MondoPlayer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        setupStationPlayer();
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,12 +23,22 @@ class ViewController: UIViewController, MondoPlayerDelegate {
         // Dispose of any resources that can be recreated.
     }
 
+    override func viewDidAppear(animated: Bool) {
+        // start playing a stream
+        mondoPlayer.play()
+    }
+
+    func setupStationPlayer() {
+        mondoPlayer.delegate = self
+        mondoPlayer.URL = NSURL(string:"http://yp.shoutcast.com/sbin/tunein-station.m3u?id=336469")
+    }
+    
     func mondoPlayer(mondoPlayer: MondoPlayer, changedState: MondoPlayerState) {
-        // TODO
+        print("player changed state: \(changedState)")
     }
     
     func mondoPlayer(mondoPlayer: MondoPlayer, encounteredError: NSError) {
-        // TODO
+        print("player error: " + encounteredError.localizedDescription)
     }
 
 }

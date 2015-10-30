@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		286E80811A5BEB6F1B7167F2 /* Pods_MondoPlayerViewTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0EAB3D7B80C22615165F7C8 /* Pods_MondoPlayerViewTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		7FCA1AE99687C0B96700CB7A /* Pods_MondoPlayerView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EFE637C557CDD786245E4E3 /* Pods_MondoPlayerView.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		286E80811A5BEB6F1B7167F2 /* Pods_MondoPlayerViewTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0EAB3D7B80C22615165F7C8 /* Pods_MondoPlayerViewTests.framework */; };
+		7FCA1AE99687C0B96700CB7A /* Pods_MondoPlayerView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EFE637C557CDD786245E4E3 /* Pods_MondoPlayerView.framework */; };
 		D39D9EAB1BDD77A500D112C8 /* MondoPlayerView.podspec in Resources */ = {isa = PBXBuildFile; fileRef = D39D9EAA1BDD77A500D112C8 /* MondoPlayerView.podspec */; };
 		D39D9EAF1BDD7F5400D112C8 /* MondoPlayerView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5E9A9511B63418E00679FEA /* MondoPlayerView.framework */; };
 		F5E9A9571B63418E00679FEA /* MondoPlayerView.h in Headers */ = {isa = PBXBuildFile; fileRef = F5E9A9561B63418E00679FEA /* MondoPlayerView.h */; settings = {ATTRIBUTES = (Public, ); }; };

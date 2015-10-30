@@ -229,7 +229,9 @@ public enum MondoPlayerState: Int {
         self.delegate?.mondoPlayer(self, encounteredError: NSError(domain: "MondoPlayer", code: 1, userInfo: [NSLocalizedDescriptionKey : "An unknown error occured."]))
         
     }
-    
+
+    // -------------------------------------------------------------
+
     func playerPlayedToEnd(notification: NSNotification) {
         
         switch self.endAction {
