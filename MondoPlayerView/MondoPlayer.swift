@@ -150,7 +150,7 @@ public enum MondoPlayerState: Int {
     
     // -------------------------------------------------------------
     
-    required public init(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         
         self.endAction = MondoPlayerEndAction.Stop
         self.state = MondoPlayerState.Stopped;
@@ -229,7 +229,9 @@ public enum MondoPlayerState: Int {
         self.delegate?.mondoPlayer(self, encounteredError: NSError(domain: "MondoPlayer", code: 1, userInfo: [NSLocalizedDescriptionKey : "An unknown error occured."]))
         
     }
-    
+
+    // -------------------------------------------------------------
+
     func playerPlayedToEnd(notification: NSNotification) {
         
         switch self.endAction {
@@ -247,9 +249,9 @@ public enum MondoPlayerState: Int {
     
     func addObservers() {
         
-        self.player?.addObserver(self, forKeyPath: "rate", options: nil, context: nil)
-        self.player?.currentItem?.addObserver(self, forKeyPath: "playbackBufferEmpty", options: nil, context: nil)
-        self.player?.currentItem?.addObserver(self, forKeyPath: "status", options: nil, context: nil)
+        self.player?.addObserver(self, forKeyPath: "rate", options: [], context: nil)
+        self.player?.currentItem?.addObserver(self, forKeyPath: "playbackBufferEmpty", options: [], context: nil)
+        self.player?.currentItem?.addObserver(self, forKeyPath: "status", options: [], context: nil)
 
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("playerFailed:"), name: AVPlayerItemFailedToPlayToEndTimeNotification, object: self.player?.currentItem)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("playerPlayedToEnd:"), name: AVPlayerItemDidPlayToEndTimeNotification, object: self.player?.currentItem)
@@ -270,7 +272,7 @@ public enum MondoPlayerState: Int {
     
     // -------------------------------------------------------------
     
-    override public func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [NSObject : AnyObject]?, context: UnsafeMutablePointer<Void>)  {
+    override public func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>)  {
         
         let obj = object as? NSObject
         
