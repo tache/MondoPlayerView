@@ -20,21 +20,25 @@ DerivedData
 !default.perspectivev3
 xcuserdata
 profile
+scratch.txt
 
 ## Other
 *.xccheckout
 *.moved-aside
 *.xcuserstate
 *.xcworkspacedata
+-*/
+•*/
+scratch.txt
 
 ## Obj-C/Swift specific
 *.hmap
 *.ipa
 
 ## Ruby
-.ruby-*
+.ruby-gemset.*
+.ruby-version.*
 .rvmrc*
-
 #Gemfile.lock
 
 # CocoaPods

@@ -294,6 +294,7 @@
 		F5E9A9481B63418E00679FEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = MoltenViper;
 				TargetAttributes = {
