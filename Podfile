@@ -1,6 +1,8 @@
 use_frameworks!
 platform :ios, '8.3'
 
+platform :ios, '8.3'
+
 target 'MondoPlayerView' do
   # Use the latest and greatest, pre-release versions 
   pod 'SwiftKick', :git => 'https://github.com/dudash/swiftkick.git'
