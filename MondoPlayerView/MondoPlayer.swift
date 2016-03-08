@@ -77,6 +77,7 @@ public enum MondoPlayerState: Int {
     
     var player : AVPlayer?
 //    var playerLayer : AVPlayerLayer?
+    var playerItem : AVPlayerItem?
     
     var actionButton : UIButton?
     
@@ -118,6 +119,26 @@ public enum MondoPlayerState: Int {
         }
     }
     
+    public var maximumDuration: NSTimeInterval! {
+        get {
+            if let playerItem = self.playerItem {
+                return CMTimeGetSeconds(playerItem.duration)
+            } else {
+                return CMTimeGetSeconds(kCMTimeIndefinite)
+            }
+        }
+    }
+
+    public var currentTime: NSTimeInterval! {
+        get {
+            if let playerItem = self.playerItem {
+                return CMTimeGetSeconds(playerItem.currentTime())
+            } else {
+                return CMTimeGetSeconds(kCMTimeIndefinite)
+            }
+        }
+    }
+
     // -------------------------------------------------------------
     
     // MARK: - Initializing
@@ -189,9 +210,9 @@ public enum MondoPlayerState: Int {
         
         self.destroyPlayer()
         
-        let playerItem : AVPlayerItem = AVPlayerItem(URL: self.URL!)
+        playerItem = AVPlayerItem(URL: self.URL!)
         
-        let player : AVPlayer = AVPlayer(playerItem: playerItem)
+        let player : AVPlayer = AVPlayer(playerItem: playerItem!)
         player.actionAtItemEnd = AVPlayerActionAtItemEnd.None
         player.volume = self.volume
         self.player = player;
