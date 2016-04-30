@@ -46,16 +46,16 @@ public enum MondoPlayerState: Int {
     case Loading, Playing, Paused
 }
 
-@IBDesignable public class MondoPlayer: UIView {
+@IBDesignable
+public class MondoPlayer: UIView {
 
-    
     // -------------------------------------------------------------
 
     // MARK: - Property Viewers
     
-    @IBInspectable var borderColor: UIColor = UIColor.clearColor() {
+    @IBInspectable var borderColor: UIColor? {
         didSet {
-            layer.borderColor = borderColor.CGColor
+            layer.borderColor = borderColor?.CGColor
         }
     }
     
@@ -96,11 +96,11 @@ public enum MondoPlayerState: Int {
         didSet {
             switch (self.state) {
             case .Paused, .Stopped:
-                self.actionButton?.removeTarget(self, action: Selector("pause"), forControlEvents: UIControlEvents.TouchUpInside)
-                self.actionButton?.addTarget(self, action: Selector("play"), forControlEvents: UIControlEvents.TouchUpInside)
+                self.actionButton?.removeTarget(self, action: #selector(MondoPlayer.pause), forControlEvents: UIControlEvents.TouchUpInside)
+                self.actionButton?.addTarget(self, action: #selector(MondoPlayer.play), forControlEvents: UIControlEvents.TouchUpInside)
             case .Loading, .Playing:
-                self.actionButton?.removeTarget(self, action: Selector("play"), forControlEvents: UIControlEvents.TouchUpInside)
-                self.actionButton?.addTarget(self, action: Selector("pause"), forControlEvents: UIControlEvents.TouchUpInside)
+                self.actionButton?.removeTarget(self, action: #selector(MondoPlayer.play), forControlEvents: UIControlEvents.TouchUpInside)
+                self.actionButton?.addTarget(self, action: #selector(MondoPlayer.pause), forControlEvents: UIControlEvents.TouchUpInside)
             }
         }
     }
@@ -274,8 +274,8 @@ public enum MondoPlayerState: Int {
         self.player?.currentItem?.addObserver(self, forKeyPath: "playbackBufferEmpty", options: [], context: nil)
         self.player?.currentItem?.addObserver(self, forKeyPath: "status", options: [], context: nil)
 
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("playerFailed:"), name: AVPlayerItemFailedToPlayToEndTimeNotification, object: self.player?.currentItem)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("playerPlayedToEnd:"), name: AVPlayerItemDidPlayToEndTimeNotification, object: self.player?.currentItem)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(MondoPlayer.playerFailed(_:)), name: AVPlayerItemFailedToPlayToEndTimeNotification, object: self.player?.currentItem)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(MondoPlayer.playerPlayedToEnd(_:)), name: AVPlayerItemDidPlayToEndTimeNotification, object: self.player?.currentItem)
         
     }
     
