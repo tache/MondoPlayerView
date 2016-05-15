@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -18,15 +16,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Test App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VoO-yS-Tna">
-                                <rect key="frame" x="20" y="559" width="560" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VoO-yS-Tna">
+                                <rect key="frame" x="266" y="559" width="68" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleAspectFit" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aG4-c5-2n5" customClass="MondoPlayer" customModule="MondoPlayerView">
-                                <rect key="frame" x="20" y="28" width="560" height="523"/>
+                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="aG4-c5-2n5" customClass="MondoPlayer" customModule="MondoPlayerView">
+                                <rect key="frame" x="150" y="200" width="300" height="200"/>
                                 <color key="backgroundColor" red="0.49943257328778101" green="0.76391931895228382" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="fnl-0S-w3V"/>
+                                    <constraint firstAttribute="width" constant="300" id="l6f-Yf-m1G"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                         <color key="value" red="0.081631947589616671" green="0.27920416048256236" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -39,16 +41,17 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IK3-GV-ZGH">
+                                <rect key="frame" x="277" y="450" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="aG4-c5-2n5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="3mF-GN-P2x"/>
-                            <constraint firstItem="VoO-yS-Tna" firstAttribute="top" secondItem="aG4-c5-2n5" secondAttribute="bottom" constant="8" id="6Er-LR-QcJ"/>
-                            <constraint firstItem="aG4-c5-2n5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="8GS-Ga-z2l"/>
-                            <constraint firstItem="VoO-yS-Tna" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="GNU-m2-wRg"/>
-                            <constraint firstItem="VoO-yS-Tna" firstAttribute="top" secondItem="aG4-c5-2n5" secondAttribute="bottom" constant="8" id="PiY-Q4-shg"/>
-                            <constraint firstItem="VoO-yS-Tna" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="mlv-4A-A6r"/>
-                            <constraint firstItem="aG4-c5-2n5" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="x5a-NL-wPD"/>
+                            <constraint firstItem="aG4-c5-2n5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="356-Fh-ly6"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VoO-yS-Tna" secondAttribute="bottom" constant="20" id="dSq-mW-Fe0"/>
+                            <constraint firstItem="VoO-yS-Tna" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gaD-9K-zkX"/>
+                            <constraint firstItem="aG4-c5-2n5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lzk-tl-FV9"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
