@@ -1,12 +1,12 @@
 Pod::Spec.new do |s|
   s.name         = "MondoPlayerView"
-  s.version      = "0.0.15"
+  s.version      = "0.0.16"
   s.summary      = "Provides a custom class and view for iOS AVPlayer."
   s.platform  = :ios, :tvos
   s.tvos.deployment_target = '9.1'
   s.ios.deployment_target = '9.1' 
   # s.osx.deployment_target = '10.9'
-  s.homepage     = "https://www.moltenviper.com"
+  s.homepage     = "https://github.com/tache/MondoPlayerView"
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = { "tache" => "tgs@tachegroup.com" }
   s.social_media_url   = "http://twitter.com/tache"
