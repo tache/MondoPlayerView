@@ -2,7 +2,6 @@ Pod::Spec.new do |s|
   s.name         = "MondoPlayerView"
   s.version      = "0.0.17"
   s.summary      = "Provides a custom class and view for iOS AVPlayer."
-  s.platform  = :ios, :tvos
   s.tvos.deployment_target = '9.1'
   s.ios.deployment_target = '9.1' 
   s.homepage     = "https://github.com/tache/MondoPlayerView"
@@ -11,7 +10,7 @@ Pod::Spec.new do |s|
   s.social_media_url   = "http://twitter.com/tache"
   s.source       = { :git => "https://github.com/tache/MondoPlayerView.git", :tag => "#{s.version}"}
   s.source_files = "MondoPlayerView/**/*.{swift,h}"
-  s.frameworks    = 'AVFoundation', 'CoreMedia'
+  s.frameworks    = ['AVFoundation', 'CoreMedia']
   s.description  = <<-DESC
                    A longer description of MondoPlayerView in Markdown format.
                    DESC
