@@ -1,0 +1,45 @@
+{
+  "authors": {
+      "tache": "tgs@tachegroup.com"
+    },  
+    "dependencies": {
+    "Fabric": [
+      "~> 1.6.3"
+    ]
+  },
+  "frameworks": [
+    "AVFoundation",
+    "CoreMedia"
+  ],
+  "homepage": "https://github.com/tache/MondoPlayerView",
+  "libraries": ["z", "c++"],
+  "license": {
+    "file": "LICENSE",
+    "type": "MIT"
+  },
+  "name": "MondoPlayerView",
+  "platforms": {
+    "ios": "9.1",
+    "tvos": "9.1"
+  },
+  "ios": {
+    "public_header_files": "iOS/Crashlytics.framework/Headers/*.h",
+    "vendored_frameworks": "iOS/Crashlytics.framework"
+  },
+  "osx": {
+    "public_header_files": "OSX/Crashlytics.framework/Versions/A/Headers/*.h",
+    "vendored_frameworks": "OSX/Crashlytics.framework"
+  },
+  "tvos": {
+    "public_header_files": "tvOS/Crashlytics.framework/Headers/*.h",
+    "vendored_frameworks": "tvOS/Crashlytics.framework"
+  },
+  "source": {
+    "git": "https://github.com/tache/MondoPlayerView.git",
+    "tag": "#{s.version}",
+  },
+  "summary": "Provides a custom class and view for iOS AVPlayer.",
+  "version": "0.0.18"
+}
+
+  s.source_files = "MondoPlayerView/**/*.{swift,h}"

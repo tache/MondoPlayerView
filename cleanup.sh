@@ -12,7 +12,6 @@ sleep 1
 find ./ -name '*.DS_Store' -print -type f -delete
 
 # Clean up the extended attributes
-xattr -vcr ./MondoPlayerView ./MondoPlayerViewTests Gemfile* setup.sh cleanup.sh *.xcodeproj *md Podfile*
-# xattr -vcr  *txt
+xattr -vcr ./MondoPlayerView ./MondoPlayerView Gemfile* setup.sh cleanup.sh *.xcodeproj *md Podfile*
 
 echo "Done."
