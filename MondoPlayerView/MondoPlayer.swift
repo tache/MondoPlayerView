@@ -46,26 +46,26 @@ public enum MondoPlayerState: Int {
     case loading, playing, paused
 }
 
-@IBDesignable
+
 open class MondoPlayer: UIView {
 
     // -------------------------------------------------------------
 
     // MARK: - Property Viewers
     
-    @IBInspectable var borderColor: UIColor? {
+    var borderColor: UIColor? {
         didSet {
             layer.borderColor = borderColor?.cgColor
         }
     }
     
-    @IBInspectable var borderWidth: CGFloat = 0 {
+    var borderWidth: CGFloat = 0 {
         didSet {
             layer.borderWidth = borderWidth
         }
     }
     
-    @IBInspectable var cornerRadius: CGFloat = 0 {
+    var cornerRadius: CGFloat = 0 {
         didSet {
             layer.cornerRadius = cornerRadius
         }
