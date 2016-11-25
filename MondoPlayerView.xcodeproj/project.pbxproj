@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		286E80811A5BEB6F1B7167F2 /* Pods_MondoPlayerViewTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0EAB3D7B80C22615165F7C8 /* Pods_MondoPlayerViewTests.framework */; };
-		7FCA1AE99687C0B96700CB7A /* Pods_MondoPlayerView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EFE637C557CDD786245E4E3 /* Pods_MondoPlayerView.framework */; };
 		D39D9EAB1BDD77A500D112C8 /* MondoPlayerView.podspec in Resources */ = {isa = PBXBuildFile; fileRef = D39D9EAA1BDD77A500D112C8 /* MondoPlayerView.podspec */; };
 		D39D9EAF1BDD7F5400D112C8 /* MondoPlayerView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5E9A9511B63418E00679FEA /* MondoPlayerView.framework */; };
 		F5E9A9571B63418E00679FEA /* MondoPlayerView.h in Headers */ = {isa = PBXBuildFile; fileRef = F5E9A9561B63418E00679FEA /* MondoPlayerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -43,13 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1AB3A91D42D97ABE62BF7A64 /* Pods-MondoPlayerViewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MondoPlayerViewTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MondoPlayerViewTests/Pods-MondoPlayerViewTests.release.xcconfig"; sourceTree = "<group>"; };
-		45C242CB6FF4A3318039C238 /* Pods-MondoPlayerView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MondoPlayerView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MondoPlayerView/Pods-MondoPlayerView.debug.xcconfig"; sourceTree = "<group>"; };
-		7EFE637C557CDD786245E4E3 /* Pods_MondoPlayerView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MondoPlayerView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AEED9B2CF06E036C1CA8FD4C /* Pods-MondoPlayerViewTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MondoPlayerViewTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MondoPlayerViewTests/Pods-MondoPlayerViewTests.debug.xcconfig"; sourceTree = "<group>"; };
-		BB8AE2B0A99CA7AE57CA5EDC /* Pods-MondoPlayerView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MondoPlayerView.release.xcconfig"; path = "Pods/Target Support Files/Pods-MondoPlayerView/Pods-MondoPlayerView.release.xcconfig"; sourceTree = "<group>"; };
 		D39D9EAA1BDD77A500D112C8 /* MondoPlayerView.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MondoPlayerView.podspec; sourceTree = SOURCE_ROOT; };
-		E0EAB3D7B80C22615165F7C8 /* Pods_MondoPlayerViewTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MondoPlayerViewTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5E9A9511B63418E00679FEA /* MondoPlayerView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MondoPlayerView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5E9A9551B63418E00679FEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5E9A9561B63418E00679FEA /* MondoPlayerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MondoPlayerView.h; sourceTree = "<group>"; };
@@ -74,7 +66,6 @@
 			files = (
 				F5E9A9991B6362B300679FEA /* CoreMedia.framework in Frameworks */,
 				F5E9A9971B6362A700679FEA /* AVFoundation.framework in Frameworks */,
-				7FCA1AE99687C0B96700CB7A /* Pods_MondoPlayerView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +74,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5E9A95D1B63418E00679FEA /* MondoPlayerView.framework in Frameworks */,
-				286E80811A5BEB6F1B7167F2 /* Pods_MondoPlayerViewTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,17 +90,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8A64CB0E716784FF0FEC4139 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				45C242CB6FF4A3318039C238 /* Pods-MondoPlayerView.debug.xcconfig */,
-				BB8AE2B0A99CA7AE57CA5EDC /* Pods-MondoPlayerView.release.xcconfig */,
-				AEED9B2CF06E036C1CA8FD4C /* Pods-MondoPlayerViewTests.debug.xcconfig */,
-				1AB3A91D42D97ABE62BF7A64 /* Pods-MondoPlayerViewTests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		F5E9A9471B63418E00679FEA = {
 			isa = PBXGroup;
 			children = (
@@ -120,7 +99,6 @@
 				F5E9A9741B6346CA00679FEA /* MondoPlayerTestApp */,
 				F5E9A9521B63418E00679FEA /* Products */,
 				F5E9A99A1B6363B300679FEA /* Frameworks */,
-				8A64CB0E716784FF0FEC4139 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -195,8 +173,6 @@
 			children = (
 				F5E9A9981B6362B300679FEA /* CoreMedia.framework */,
 				F5E9A9961B6362A700679FEA /* AVFoundation.framework */,
-				7EFE637C557CDD786245E4E3 /* Pods_MondoPlayerView.framework */,
-				E0EAB3D7B80C22615165F7C8 /* Pods_MondoPlayerViewTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -219,12 +195,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F5E9A9671B63418E00679FEA /* Build configuration list for PBXNativeTarget "MondoPlayerView" */;
 			buildPhases = (
-				5FBCC79AAF6F156CBEED2DCF /* [CP] Check Pods Manifest.lock */,
 				F5E9A94C1B63418E00679FEA /* Sources */,
 				F5E9A94D1B63418E00679FEA /* Frameworks */,
 				F5E9A94E1B63418E00679FEA /* Headers */,
 				F5E9A94F1B63418E00679FEA /* Resources */,
-				3E955E499DAD6044A103F20B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -239,12 +213,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F5E9A96A1B63418E00679FEA /* Build configuration list for PBXNativeTarget "MondoPlayerViewTests" */;
 			buildPhases = (
-				C4D1EBA695E6C6C39F0FB21A /* [CP] Check Pods Manifest.lock */,
 				F5E9A9581B63418E00679FEA /* Sources */,
 				F5E9A9591B63418E00679FEA /* Frameworks */,
 				F5E9A95A1B63418E00679FEA /* Resources */,
-				25D7DA4B6B4F54FD451BF149 /* [CP] Embed Pods Frameworks */,
-				EE5D6575945F968A34C68205 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -347,66 +318,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		25D7DA4B6B4F54FD451BF149 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MondoPlayerViewTests/Pods-MondoPlayerViewTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3E955E499DAD6044A103F20B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MondoPlayerView/Pods-MondoPlayerView-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5FBCC79AAF6F156CBEED2DCF /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		C4D1EBA695E6C6C39F0FB21A /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
 		D39D9EAE1BDD7B1700D112C8 /* Print Settings */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -420,21 +331,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "echo \"SRCROOT = ${SRCROOT}\"";
-		};
-		EE5D6575945F968A34C68205 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MondoPlayerViewTests/Pods-MondoPlayerViewTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -588,7 +484,6 @@
 		};
 		F5E9A9681B63418E00679FEA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 45C242CB6FF4A3318039C238 /* Pods-MondoPlayerView.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -608,7 +503,6 @@
 		};
 		F5E9A9691B63418E00679FEA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BB8AE2B0A99CA7AE57CA5EDC /* Pods-MondoPlayerView.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -627,7 +521,6 @@
 		};
 		F5E9A96B1B63418E00679FEA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AEED9B2CF06E036C1CA8FD4C /* Pods-MondoPlayerViewTests.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -643,7 +536,6 @@
 		};
 		F5E9A96C1B63418E00679FEA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1AB3A91D42D97ABE62BF7A64 /* Pods-MondoPlayerViewTests.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = MondoPlayerViewTests/Info.plist;

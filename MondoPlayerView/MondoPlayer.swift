@@ -338,7 +338,7 @@ open class MondoPlayer: UIView {
     // -------------------------------------------------------------
     
     // MARK: - Player Actions
-    
+
     open func play() {
         
         switch self.state {

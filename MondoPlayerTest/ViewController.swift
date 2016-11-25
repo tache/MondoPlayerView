@@ -9,7 +9,7 @@
 import UIKit
 import MondoPlayerView
 
-class ViewController: UIViewController, MondoPlayerDelegate {
+class ViewController: UIViewController {
 
     @IBOutlet weak var mondoPlayer: MondoPlayer!
     
@@ -33,6 +33,9 @@ class ViewController: UIViewController, MondoPlayerDelegate {
         mondoPlayer.URL = URL(string:"http://yp.shoutcast.com/sbin/tunein-station.m3u?id=336469")
     }
     
+}
+
+extension ViewController: MondoPlayerDelegate {
     func mondoPlayer(_ mondoPlayer: MondoPlayer, changedState: MondoPlayerState) {
         print("player changed state: \(changedState)")
     }
@@ -40,6 +43,4 @@ class ViewController: UIViewController, MondoPlayerDelegate {
     func mondoPlayer(_ mondoPlayer: MondoPlayer, encounteredError: NSError) {
         print("player error: " + encounteredError.localizedDescription)
     }
-
 }
-
