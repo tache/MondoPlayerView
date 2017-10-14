@@ -244,7 +244,7 @@ open class MondoPlayer: UIView {
     
     // MARK: - Player Notifications
     
-    func playerFailed(_ notification: Notification) {
+    @objc func playerFailed(_ notification: Notification) {
         
         self.destroyPlayer();
         self.delegate?.mondoPlayer(self, encounteredError: NSError(domain: "MondoPlayer", code: 1, userInfo: [NSLocalizedDescriptionKey : "An unknown error occured."]))
@@ -253,7 +253,7 @@ open class MondoPlayer: UIView {
 
     // -------------------------------------------------------------
 
-    func playerPlayedToEnd(_ notification: Notification) {
+    @objc func playerPlayedToEnd(_ notification: Notification) {
         
         switch self.endAction {
         case .loop:
@@ -339,7 +339,7 @@ open class MondoPlayer: UIView {
     
     // MARK: - Player Actions
 
-    open func play() {
+    @objc open func play() {
         
         switch self.state {
         case MondoPlayerState.paused:
@@ -354,7 +354,7 @@ open class MondoPlayer: UIView {
     
     // -------------------------------------------------------------
     
-    open func pause() {
+    @objc open func pause() {
         
         switch self.state {
         case MondoPlayerState.playing, MondoPlayerState.loading:
