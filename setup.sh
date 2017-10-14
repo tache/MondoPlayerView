@@ -1,9 +1,12 @@
 #!/bin/sh
 
 echo "Starting..."
-echo "Rebuilding Pods and workspace..."
-pod install
-sleep 1
-open MondoPlayer.xcworkspace
-echo "Done."
 
+echo "Installing bundled dependencies..."
+bundle install
+
+echo "Open XCode Workspace..."
+sleep 1
+open MondoPlayerView.xcworkproj
+
+echo "Done."
