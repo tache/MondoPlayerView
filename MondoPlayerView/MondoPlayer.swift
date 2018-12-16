@@ -32,40 +32,40 @@ import CoreMedia
 import UIKit
 
 public protocol MondoPlayerDelegate {
-    func mondoPlayer(mondoPlayer: MondoPlayer, changedState: MondoPlayerState)
-    func mondoPlayer(mondoPlayer: MondoPlayer, encounteredError: NSError)
+    func mondoPlayer(_ mondoPlayer: MondoPlayer, changedState: MondoPlayerState)
+    func mondoPlayer(_ mondoPlayer: MondoPlayer, encounteredError: NSError)
 }
 
 public enum MondoPlayerEndAction: Int {
-    case Stop = 1
-    case Loop
+    case stop = 1
+    case loop
 }
 
 public enum MondoPlayerState: Int {
-    case Stopped = 1
-    case Loading, Playing, Paused
+    case stopped = 1
+    case loading, playing, paused
 }
 
-@IBDesignable
-public class MondoPlayer: UIView {
+
+open class MondoPlayer: UIView {
 
     // -------------------------------------------------------------
 
     // MARK: - Property Viewers
     
-    @IBInspectable var borderColor: UIColor? {
+    var borderColor: UIColor? {
         didSet {
-            layer.borderColor = borderColor?.CGColor
+            layer.borderColor = borderColor?.cgColor
         }
     }
     
-    @IBInspectable var borderWidth: CGFloat = 0 {
+    var borderWidth: CGFloat = 0 {
         didSet {
             layer.borderWidth = borderWidth
         }
     }
     
-    @IBInspectable var cornerRadius: CGFloat = 0 {
+    var cornerRadius: CGFloat = 0 {
         didSet {
             layer.cornerRadius = cornerRadius
         }
@@ -88,30 +88,30 @@ public class MondoPlayer: UIView {
     
     // MARK: - Public
     
-    public var delegate : MondoPlayerDelegate?
+    open var delegate : MondoPlayerDelegate?
     
-    public var endAction : MondoPlayerEndAction
+    open var endAction : MondoPlayerEndAction
     
-    public var state : MondoPlayerState {
+    open var state : MondoPlayerState {
         didSet {
             switch (self.state) {
-            case .Paused, .Stopped:
-                self.actionButton?.removeTarget(self, action: #selector(MondoPlayer.pause), forControlEvents: UIControlEvents.TouchUpInside)
-                self.actionButton?.addTarget(self, action: #selector(MondoPlayer.play), forControlEvents: UIControlEvents.TouchUpInside)
-            case .Loading, .Playing:
-                self.actionButton?.removeTarget(self, action: #selector(MondoPlayer.play), forControlEvents: UIControlEvents.TouchUpInside)
-                self.actionButton?.addTarget(self, action: #selector(MondoPlayer.pause), forControlEvents: UIControlEvents.TouchUpInside)
+            case .paused, .stopped:
+                self.actionButton?.removeTarget(self, action: #selector(MondoPlayer.pause), for: UIControlEvents.touchUpInside)
+                self.actionButton?.addTarget(self, action: #selector(MondoPlayer.play), for: UIControlEvents.touchUpInside)
+            case .loading, .playing:
+                self.actionButton?.removeTarget(self, action: #selector(MondoPlayer.play), for: UIControlEvents.touchUpInside)
+                self.actionButton?.addTarget(self, action: #selector(MondoPlayer.pause), for: UIControlEvents.touchUpInside)
             }
         }
     }
     
-    public var URL : NSURL? {
+    open var URL : Foundation.URL? {
         didSet {
             self.destroyPlayer()
         }
     }
     
-    public var volume : Float {
+    open var volume : Float {
         didSet {
             if (self.player != nil) {
                 self.player!.volume = self.volume
@@ -119,7 +119,7 @@ public class MondoPlayer: UIView {
         }
     }
     
-    public var maximumDuration: NSTimeInterval! {
+    open var maximumDuration: TimeInterval! {
         get {
             if let playerItem = self.playerItem {
                 return CMTimeGetSeconds(playerItem.duration)
@@ -129,7 +129,7 @@ public class MondoPlayer: UIView {
         }
     }
 
-    public var currentTime: NSTimeInterval! {
+    open var currentTime: TimeInterval! {
         get {
             if let playerItem = self.playerItem {
                 return CMTimeGetSeconds(playerItem.currentTime())
@@ -154,8 +154,8 @@ public class MondoPlayer: UIView {
     
     public override init(frame: CGRect) {
         
-        self.endAction = MondoPlayerEndAction.Stop
-        self.state = MondoPlayerState.Stopped;
+        self.endAction = MondoPlayerEndAction.stop
+        self.state = MondoPlayerState.stopped;
         self.volume = 1.0;
         
         self.isBufferEmpty = false
@@ -173,8 +173,8 @@ public class MondoPlayer: UIView {
     
     required public init?(coder aDecoder: NSCoder) {
         
-        self.endAction = MondoPlayerEndAction.Stop
-        self.state = MondoPlayerState.Stopped;
+        self.endAction = MondoPlayerEndAction.stop
+        self.state = MondoPlayerState.stopped;
         self.volume = 1.0;
         self.isBufferEmpty = false
         self.isLoaded = false
@@ -186,7 +186,7 @@ public class MondoPlayer: UIView {
     
     // MARK: - Layout
     
-    override public func layoutSubviews() {
+    override open func layoutSubviews() {
         
         if ((self.actionButton) != nil) {
             self.actionButton!.frame = self.bounds
@@ -210,10 +210,10 @@ public class MondoPlayer: UIView {
         
         self.destroyPlayer()
         
-        playerItem = AVPlayerItem(URL: self.URL!)
+        playerItem = AVPlayerItem(url: self.URL!)
         
         let player : AVPlayer = AVPlayer(playerItem: playerItem!)
-        player.actionAtItemEnd = AVPlayerActionAtItemEnd.None
+        player.actionAtItemEnd = AVPlayerActionAtItemEnd.none
         player.volume = self.volume
         self.player = player;
         
@@ -236,7 +236,7 @@ public class MondoPlayer: UIView {
         self.player = nil
 //        self.playerLayer?.removeFromSuperlayer()
 //        self.playerLayer = nil
-        self.setStateNotifyingDelegate(MondoPlayerState.Stopped)
+        self.setStateNotifyingDelegate(MondoPlayerState.stopped)
         
     }
     
@@ -244,7 +244,7 @@ public class MondoPlayer: UIView {
     
     // MARK: - Player Notifications
     
-    func playerFailed(notification: NSNotification) {
+    @objc func playerFailed(_ notification: Notification) {
         
         self.destroyPlayer();
         self.delegate?.mondoPlayer(self, encounteredError: NSError(domain: "MondoPlayer", code: 1, userInfo: [NSLocalizedDescriptionKey : "An unknown error occured."]))
@@ -253,12 +253,12 @@ public class MondoPlayer: UIView {
 
     // -------------------------------------------------------------
 
-    func playerPlayedToEnd(notification: NSNotification) {
+    @objc func playerPlayedToEnd(_ notification: Notification) {
         
         switch self.endAction {
-        case .Loop:
-            self.player?.currentItem?.seekToTime(kCMTimeZero)
-        case .Stop:
+        case .loop:
+            self.player?.currentItem?.seek(to: kCMTimeZero)
+        case .stop:
             self.destroyPlayer()
         }
         
@@ -274,8 +274,8 @@ public class MondoPlayer: UIView {
         self.player?.currentItem?.addObserver(self, forKeyPath: "playbackBufferEmpty", options: [], context: nil)
         self.player?.currentItem?.addObserver(self, forKeyPath: "status", options: [], context: nil)
 
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(MondoPlayer.playerFailed(_:)), name: AVPlayerItemFailedToPlayToEndTimeNotification, object: self.player?.currentItem)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(MondoPlayer.playerPlayedToEnd(_:)), name: AVPlayerItemDidPlayToEndTimeNotification, object: self.player?.currentItem)
+        NotificationCenter.default.addObserver(self, selector: #selector(MondoPlayer.playerFailed(_:)), name: NSNotification.Name.AVPlayerItemFailedToPlayToEndTime, object: self.player?.currentItem)
+        NotificationCenter.default.addObserver(self, selector: #selector(MondoPlayer.playerPlayedToEnd(_:)), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: self.player?.currentItem)
         
     }
     
@@ -287,13 +287,13 @@ public class MondoPlayer: UIView {
         self.player?.currentItem?.removeObserver(self, forKeyPath: "playbackBufferEmpty")
         self.player?.currentItem?.removeObserver(self, forKeyPath: "status")
 
-        NSNotificationCenter.defaultCenter().removeObserver(self)
+        NotificationCenter.default.removeObserver(self)
         
     }
     
     // -------------------------------------------------------------
     
-    override public func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>)  {
+    override open func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?)  {
         
         let obj = object as? NSObject
         
@@ -301,30 +301,30 @@ public class MondoPlayer: UIView {
             if keyPath == "rate" {
                 let rate = self.player?.rate
                 if !self.isLoaded {
-                    self.setStateNotifyingDelegate(MondoPlayerState.Loading)
+                    self.setStateNotifyingDelegate(MondoPlayerState.loading)
                 } else if rate == 1.0 {
-                    self.setStateNotifyingDelegate(MondoPlayerState.Playing)
+                    self.setStateNotifyingDelegate(MondoPlayerState.playing)
                 } else if rate == 0.0 {
                     if self.isBufferEmpty {
-                        self.setStateNotifyingDelegate(MondoPlayerState.Loading)
+                        self.setStateNotifyingDelegate(MondoPlayerState.loading)
                     } else {
-                        self.setStateNotifyingDelegate(MondoPlayerState.Paused)
+                        self.setStateNotifyingDelegate(MondoPlayerState.paused)
                     }
                 }
             }
         } else if obj == self.player?.currentItem {
             if keyPath == "status" {
                 let status : AVPlayerItemStatus? = self.player?.currentItem?.status
-                if status == AVPlayerItemStatus.Failed {
+                if status == AVPlayerItemStatus.failed {
                     self.destroyPlayer()
                     self.delegate?.mondoPlayer(self, encounteredError: NSError(domain: "MondoPlayer", code: 1, userInfo: [NSLocalizedDescriptionKey : "An unknown error occured."]))
-                } else if status == AVPlayerItemStatus.ReadyToPlay {
+                } else if status == AVPlayerItemStatus.readyToPlay {
                     self.isLoaded = true
-                    self.setStateNotifyingDelegate(MondoPlayerState.Playing)
+                    self.setStateNotifyingDelegate(MondoPlayerState.playing)
                 }
             } else if keyPath == "playbackBufferEmpty" {
                 
-                let empty : Bool? = self.player?.currentItem?.playbackBufferEmpty
+                let empty : Bool? = self.player?.currentItem?.isPlaybackBufferEmpty
                 if empty != nil {
                     self.isBufferEmpty = true
                 } else {
@@ -338,13 +338,13 @@ public class MondoPlayer: UIView {
     // -------------------------------------------------------------
     
     // MARK: - Player Actions
-    
-    public func play() {
+
+    @objc open func play() {
         
         switch self.state {
-        case MondoPlayerState.Paused:
+        case MondoPlayerState.paused:
             self.player?.play()
-        case MondoPlayerState.Stopped:
+        case MondoPlayerState.stopped:
             self.setupPlayer();
         default:
             break
@@ -354,10 +354,10 @@ public class MondoPlayer: UIView {
     
     // -------------------------------------------------------------
     
-    public func pause() {
+    @objc open func pause() {
         
         switch self.state {
-        case MondoPlayerState.Playing, MondoPlayerState.Loading:
+        case MondoPlayerState.playing, MondoPlayerState.loading:
             self.player?.pause()
         default:
             break
@@ -368,9 +368,9 @@ public class MondoPlayer: UIView {
     
     // -------------------------------------------------------------
     
-    public func stop() {
+    open func stop() {
         
-        if (self.state == MondoPlayerState.Stopped) {
+        if (self.state == MondoPlayerState.stopped) {
             return
         }
         self.destroyPlayer()
@@ -381,7 +381,7 @@ public class MondoPlayer: UIView {
     
     // MARK: - Getters & Setters
     
-    func setStateNotifyingDelegate(state: MondoPlayerState) {
+    func setStateNotifyingDelegate(_ state: MondoPlayerState) {
         
         self.state = state
         self.delegate?.mondoPlayer(self, changedState: state)
