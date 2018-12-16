@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
-ruby '2.2.4'
+ruby '2.5.3'
 
-gem 'cocoapods', '~> 1.1.0'
-gem 'bundler', '~> 1.13.6'
+gem 'cocoapods', '~> 1.6.0.beta.2'
+gem 'bundler', '~> 1.17.2'
 
 # gem 'fastlane'
 # gem 'rubyzip'
