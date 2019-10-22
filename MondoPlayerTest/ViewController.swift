@@ -30,7 +30,7 @@ class ViewController: UIViewController {
 
     func setupStationPlayer() {
         mondoPlayer.delegate = self
-        mondoPlayer.URL = URL(string:"http://yp.shoutcast.com/sbin/tunein-station.m3u?id=336469")
+        mondoPlayer.URL = URL(string:"https://yp.shoutcast.com/sbin/tunein-station.m3u?id=1516098")
     }
     
 }

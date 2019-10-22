@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -46,17 +45,18 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IK3-GV-ZGH">
-                                <rect key="frame" x="277" y="450" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="277" y="435" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.60000002379999995" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="aG4-c5-2n5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="356-Fh-ly6"/>
+                            <constraint firstItem="IK3-GV-ZGH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QjZ-cK-Enp"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VoO-yS-Tna" secondAttribute="bottom" constant="20" id="dSq-mW-Fe0"/>
                             <constraint firstItem="VoO-yS-Tna" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gaD-9K-zkX"/>
                             <constraint firstItem="aG4-c5-2n5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lzk-tl-FV9"/>
+                            <constraint firstItem="IK3-GV-ZGH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.5" id="wsb-Tm-30i"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
