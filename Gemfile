@@ -1,14 +1,14 @@
 source 'https://rubygems.org'
-ruby '2.5.3'
+ruby '2.6.4'
 
-gem 'cocoapods', '~> 1.4.0.beta.2'
-gem 'bundler', '~> 1.15'
+gem 'cocoapods', '~> 1.8.0'
+gem 'bundler', '~> 2.0.2'
 
-gem 'nokogiri', '~> 1.8.5'
+gem 'nokogiri'
 
 gem 'fastlane'
 
-gem 'rubyzip', '>= 1.0.0'
+gem 'rubyzip'
 gem 'zip-zip'
 
 gem 'axlsx'
