@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   s.version      = "0.0.18"
   s.summary      = "Provides a custom class and view for iOS AVPlayer."
   s.tvos.deployment_target = '10.3'
-  s.ios.deployment_target = '10.3'
+  s.ios.deployment_target = '11.4'
   s.homepage     = "https://github.com/tache/MondoPlayerView"
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = { "tache" => "tgs@tachegroup.com" }
